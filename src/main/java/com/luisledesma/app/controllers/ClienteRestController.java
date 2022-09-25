@@ -52,7 +52,11 @@ public class ClienteRestController {
 			log.info("Error al consultar el cliente");
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		
+
+
+
+
+
 		if(cliente == null) {
 			response.put("mensaje", "El cliente con el ID: ".concat(String.valueOf(id).concat(" no existe en la base de datos")));
 			log.error("Error al consultar el cliente, cliente no existe");
